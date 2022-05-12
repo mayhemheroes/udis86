@@ -1,0 +1,7 @@
+project: rnshah9/playground
+target: playground
+image: ghcr.io/rnshah9/playground:udis86
+
+cmds:
+  - cmd: /repo/udcli/.libs/udcli @@
+    # filepath: /test.c
