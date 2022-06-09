@@ -1,4 +1,4 @@
-project: rnshah9/mayhem-udis86
+project: udis86
 target: udcli
 
 cmds:
