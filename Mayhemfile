@@ -2,4 +2,4 @@ project: udis86
 target: udcli
 
 cmds:
-  - cmd: /repo/udcli/.libs/udcli @@
+  - cmd: /install/bin/udcli @@
