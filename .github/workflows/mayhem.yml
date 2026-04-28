@@ -23,7 +23,7 @@ jobs:
             triplet: x64-linux
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: true
 
@@ -49,13 +49,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Start analysis
-        uses: ForAllSecure/mcode-action@v1
+        uses: ForAllSecure/mcode-action@long-runs
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
           args: --image ${{ steps.meta.outputs.tags }}
-          sarif-output: sarif
-
-      - name: Upload SARIF file(s)
-        uses: github/codeql-action/upload-sarif@v1
-        with:
-          sarif_file: sarif
